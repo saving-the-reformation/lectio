@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0b0a" media="(prefers-color-scheme: dark)">
+  <title>Lectio</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Lectio">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 id="screen-title">Today</h1>
+    <p class="date" id="today-date"></p>
+  </header>
+
+  <main id="screen"></main>
+
+  <div class="player" id="player" hidden>
+    <div class="player-progress"><div id="player-fill"></div></div>
+    <div class="player-top">
+      <button class="pl-icon" id="pl-close" aria-label="Close player"></button>
+      <div class="player-info">
+        <span id="player-label"></span>
+        <span id="player-time"></span>
+      </div>
+      <button class="pl-speed" id="pl-speed" aria-label="Change speed">1×</button>
+    </div>
+    <div class="player-controls">
+      <button class="pl-text" id="pl-prev-sec" aria-label="Previous section">‹ Section</button>
+      <button class="pl-icon" id="pl-prev" aria-label="Previous sentence"></button>
+      <button class="pl-main" id="pl-play" aria-label="Play"></button>
+      <button class="pl-icon" id="pl-next" aria-label="Next sentence"></button>
+      <button class="pl-text" id="pl-next-sec" aria-label="Next section">Section ›</button>
+    </div>
+  </div>
+
+  <nav class="tabbar" aria-label="Sections">
+    <button class="tab active" data-tab="today">Today</button>
+    <button class="tab" data-tab="library">Library</button>
+    <button class="tab" data-tab="journal">Journal</button>
+    <button class="tab" data-tab="history">History</button>
+    <button class="tab" data-tab="settings">Settings</button>
+  </nav>
+
+  <script src="esv.js"></script>
+  <script src="reader.js"></script>
+  <script src="library.js"></script>
+  <script src="sync.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
